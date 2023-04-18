@@ -1,0 +1,21 @@
+name: Tests
+
+on:
+  push:
+    branches: [ "main" ]
+    paths: ['src/**', 'tests/**']
+  pull_request:
+    branches: [ "main" ]
+    paths: ['src/**', 'tests/**']
+
+jobs:
+  build:
+    name: Building & running
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: make
+      run: make
+    - name: make test
+      run: make test
