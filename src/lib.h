@@ -8,8 +8,11 @@
 #define ERR_MEM_ALLOC 0x01
 #define ERR_PARAM_NULL 0x02
 #define ERR_FILE_OPEN 0x04
+#define ERR_OBJECT_NULL 0x08
 
 #define LIB_ERR(msg, err) lib_error(__FILE__, __LINE__, msg, err)
+
+#define LEN(arr) ((int)(sizeof(arr) / sizeof(arr)[0]))
 
 /*
  * Function: lib_error
