@@ -1,6 +1,7 @@
 #ifndef LIB_H_
 #define LIB_H_
 
+#include "libutils.h"
 #include <stdio.h>
 #include <stdint.h>
 #include <stdlib.h>
@@ -11,8 +12,6 @@
 #define ERR_OBJECT_NULL 0x08
 
 #define LIB_ERR(msg, err) lib_error(__FILE__, __LINE__, msg, err)
-
-#define LEN(arr) ((int)(sizeof(arr) / sizeof(arr)[0]))
 
 /*
  * Function: lib_error
