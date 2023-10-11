@@ -13,3 +13,8 @@ void lib_error(const char *file, size_t line, const char *msg, int8_t err)
         exit(err);
     }
 }
+
+size_t rand_between(size_t min, size_t max)
+{
+    return min + rand() / (RAND_MAX / (max - min + 1) + 1);
+}

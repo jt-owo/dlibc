@@ -27,4 +27,14 @@
  */
 void lib_error(const char *file, size_t line, const char *msg, int8_t err);
 
+/*
+ * Function: rand_between
+ * ----------------------------
+ *   Returns a random number between two given numbers.
+ *
+ *   min: mininum number
+ *   line: maximum number
+ */
+size_t rand_between(size_t min, size_t max);
+
 #endif

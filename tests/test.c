@@ -1,4 +1,3 @@
-#include "../build/include/tiles.h"
 #include "../build/include/renderer.h"
 
 int main(int argc, char **argv)
@@ -10,7 +9,9 @@ int main(int argc, char **argv)
 
         screen_t *screen = screen_init(tiles);
 
-        render(screen);
+        entity_t* player = entity_new('P', 6, 8);
+
+        render(screen, player);
 
         screen_free(screen);
 
