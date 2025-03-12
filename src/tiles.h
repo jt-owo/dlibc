@@ -48,20 +48,11 @@ tilemap_t *tilemap_initf(char *filePath);
 void tilemap_free(tilemap_t *tilemap);
 
 /*
- * Function: tilemap_print
- * ----------------------------
- *   Prints the tilemap data
- *
- *   tilemap: tilemap
- */
-void tilemap_print(tilemap_t *tilemap);
-
-/*
  * Function: tile_init
  * ----------------------------
  *   Initializes a new tile struct
  *
- *   symbol: char that the tile should represent
+ *   symbol: A char which the tile should represent
  *
  *   returns: tile struct
  */
