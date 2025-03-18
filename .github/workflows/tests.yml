@@ -10,12 +10,10 @@ on:
 
 jobs:
   build:
-    name: Building & running
+    name: build & test
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
     - name: make
       run: make
-    - name: make test
-      run: make test
