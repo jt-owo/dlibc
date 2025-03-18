@@ -9,7 +9,7 @@ void lib_error(const char *file, size_t line, const char *msg, int8_t err)
     case ERR_FILE_OPEN:
     default:
         // TODO: Add error logs
-        printf("\n[ERROR:%d] %s:%d: %s\n", err, file, line, msg);
+        printf("\n[ERROR:%d] %s:%ld: %s\n", err, file, line, msg);
         exit(err);
     }
 }

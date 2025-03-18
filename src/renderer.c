@@ -37,7 +37,7 @@ void render(screen_t *screen)
         LIB_ERR("screen data is null", ERR_OBJECT_NULL);
 
     if (screen->content->rows <= 0 || screen->content->cols <= 0)
-        printf("\nrows: %d, cols: %d", screen->content->rows, screen->content->cols), exit(-1);
+        printf("\nrows: %ld, cols: %ld", screen->content->rows, screen->content->cols), exit(-1);
 
     for (size_t i = 0; i < screen->content->rows; i++)
     {

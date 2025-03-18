@@ -5,6 +5,11 @@ TEST_DIR := tests
 BUILD_ARGS := -Wall -Wextra -Wpedantic
 LIB_NAME := owolib
 
+# build test with library and run.
+test: finish
+	gcc $(BUILD_ARGS) $(TEST_DIR)/test.c ./$(BUILD_DIR)/$(LIB_NAME).dll -o test
+	./test $(TEST_DIR)/map.txt
+
 # cleanup unused .o files.
 finish: copyHeaders
 	rm -f *.o
@@ -15,7 +20,7 @@ copyHeaders: link
 
 # Compile object files to a shared dll.
 link: mkDirs
-	gcc -shared -o $(LIB_NAME).dll *.o
+	gcc -shared -o ./$(BUILD_DIR)/$(LIB_NAME).dll *.o
 
 # create dirs for compiled library.
 mkDirs: compile
@@ -28,13 +33,9 @@ mkDirs: compile
 compile:
 	gcc $(BUILD_ARGS) -c ./$(SRC_DIR)/*.c
 
-# build test with library and run.
-test:
-	gcc $(BUILD_ARGS) $(TEST_DIR)/test.c -L. -l$(LIB_NAME) -o test
-	./test $(TEST_DIR)/map.txt
-
 # remove build dir.
 rem:
 	if [ -d "$(BUILD_DIR)" ]; then rm -Rf $(BUILD_DIR); fi
+	rm -f test
 	rm -f *.exe
 	rm -f *.dll
