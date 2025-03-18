@@ -140,20 +140,3 @@ tile_t tile_init(char symbol)
 
     return t;
 }
-
-void tilemap_print(tilemap_t *tilemap)
-{
-    if (tilemap == NULL)
-        LIB_ERR("tilemap is null", ERR_PARAM_NULL);
-
-    if (tilemap->rows <= 0 || tilemap->cols <= 0)
-        printf("\nrows: %d, cols: %d", tilemap->rows, tilemap->cols), exit(-1);
-
-    for (size_t i = 0; i < tilemap->rows; i++)
-    {
-        for (size_t j = 0; j < tilemap->cols; j++)
-        {
-            printf("%c", tilemap->data[i][j].sym);
-        }
-    }
-}
