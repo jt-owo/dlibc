@@ -136,7 +136,7 @@ void tilemap_free(tilemap_t *tilemap)
 tile_t tile_init(char symbol)
 {
     tile_t t = {0};
-    t.sym = symbol;
+    t.symbol = symbol;
 
     return t;
 }

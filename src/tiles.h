@@ -5,7 +5,7 @@
 
 typedef struct tile
 {
-    char sym;
+    char symbol;
 } tile_t;
 
 typedef struct tilemap

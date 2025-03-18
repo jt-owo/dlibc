@@ -43,7 +43,7 @@ void render(screen_t *screen)
     {
         for (size_t j = 0; j < screen->content->cols; j++)
         {
-            printf("%c", screen->content->data[i][j].sym);
+            printf("%c", screen->content->data[i][j].symbol);
         }
     }
 }

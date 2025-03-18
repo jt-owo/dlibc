@@ -5,6 +5,9 @@
 #include <stdint.h>
 #include <stdlib.h>
 
+#define LIB_NAME "owolib"
+#define LIB_VERSION "0.1"
+
 #define ERR_MEM_ALLOC 0x01
 #define ERR_PARAM_NULL 0x02
 #define ERR_FILE_OPEN 0x04
