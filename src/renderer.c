@@ -28,7 +28,7 @@ void screen_free(screen_t *screen)
     free(screen);
 }
 
-void render(screen_t *screen)
+void render_screen(screen_t *screen)
 {
     if (screen == NULL)
         LIB_ERR("screen is null", ERR_PARAM_NULL);

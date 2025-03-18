@@ -31,10 +31,10 @@ screen_t *screen_init(tilemap_t *tilemap);
 void screen_free(screen_t *screen);
 
 /*
- * Function: render
+ * Function: render_screen
  * ----------------------------
  *   Renders a screen (Only tilemap data works currently)
  */
-void render(screen_t *screen);
+void render_screen(screen_t *screen);
 
 #endif

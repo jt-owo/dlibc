@@ -9,7 +9,7 @@ int main(int argc, char **argv)
 
         screen_t *screen = screen_init(tiles);
 
-        render(screen);
+        render_screen(screen);
 
         screen_free(screen);
 
